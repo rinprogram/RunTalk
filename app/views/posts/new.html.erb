@@ -1,0 +1,22 @@
+<div class="main posts-new">
+  <div class="container">
+    <h1 class="form-heading">Talk</h1>
+    <div class="post-tips">
+      <%= link_to("Talk", "/posts/new") %>
+      <%= link_to("練習日誌", "/memos/new") %>
+    </div>
+    <%= form_tag("/posts/create") do %>
+      <div class="form">
+        <div class="form-body">
+          <% @post.errors.full_messages.each do |message| %>
+            <div class="form-error">
+              <%= message %>
+            </div>
+          <% end %>
+          <textarea name="content"><%= @post.content %></textarea>
+          <input type="submit" value="投稿">
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

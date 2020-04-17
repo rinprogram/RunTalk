@@ -1,0 +1,35 @@
+<div class="main posts-show">
+  <div class="container">
+    <div class="posts-show-item">
+      <div class="post-user-name">
+        <img src="<%= "/user_images/#{@user.image_name}" %>">
+        <%= link_to(@user.name, "/users/#{@user.id}") %>
+      </div>
+      <p>
+        <%= @memo.content %>
+      </p>
+      <div class="post-time">
+        <%= @memo.created_at %>
+      </div>
+
+      <% if Favo.find_by(user_id: @current_user.id, memo_id: @memo.id) %>
+        <%= link_to("/favos/#{@memo.id}/destroy", {method: "memo"}) do %>
+          <span class="fa fa-heart like-btn-unlike"></span>
+        <% end %>
+      <% else %>
+        <%= link_to("/favos/#{@memo.id}/create", {method: "memo"}) do %>
+          <span class="fa fa-heart like-btn"></span>
+        <% end %>
+      <% end %>
+
+      <%= @favos_count %>
+
+      <% if @memo.user_id == @current_user.id %>
+        <div class="post-menus">
+          <%= link_to("編集", "/memos/#{@memo.id}/edit") %>
+          <%= link_to("削除", "/memos/#{@memo.id}/destroy", {method: "memo"}) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

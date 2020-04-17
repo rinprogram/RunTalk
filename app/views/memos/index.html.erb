@@ -1,0 +1,21 @@
+<div class="main posts-index">
+  <div class="container">
+    <div class="post-tips">
+      <%= link_to("Talk", "/posts/index") %>
+      <%= link_to("練習日誌", "/memos/index") %>
+    </div>
+    <% @memos.each do |memo| %>
+      <div class="posts-index-item">
+        <div class="post-left">
+          <img src="<%= "/user_images/#{memo.user.image_name}" %>">
+        </div>
+        <div class="post-right">
+          <div class="post-user-name">
+            <%= link_to(memo.user.name, "/users/#{memo.user.id}") %>
+          </div>
+          <%= link_to(memo.content, "/memos/#{memo.id}") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
