@@ -10,7 +10,6 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="responsive.css">
   </head>
 
   <body>
@@ -22,11 +21,12 @@
           <%= link_to("RunTalk", "/") %>
         <% end %>
       </div>
+    
       <ul class="header-menus">
         <% if @current_user %>
           <li>
             <div class="name-left">
-             <img src="<%= "/user_images/#{@current_user.image_name}" %>">
+            <img src="<%= "/user_images/#{@current_user.image_name}" %>">
             </div>
             <%= link_to(@current_user.name,"/users/#{@current_user.id}") %>
           </li>
@@ -54,6 +54,7 @@
           </li>
         <% end %>
       </ul>
+      
     </header>
     <% if flash[:notice] %>
       <div class="flash">

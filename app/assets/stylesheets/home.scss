@@ -131,6 +131,15 @@ header {
   object-fit: cover;
 }
 
+.menu-icon {
+  color: white;
+  float: right;
+  font-size: 40px;
+  padding: 21px 0;
+  margin-right: 50px;
+  /* displayをnoneに指定してください */
+  display:none;
+}
 
 /* top ================================ */
 .top-main {
@@ -262,32 +271,25 @@ header {
 
 /* タブレット向けレイアウト */
 @media(max-width: 1000px) {
-  .lesson {
-    width: 50%;
-    margin-bottom: 50px;
-  }
-
-
-  .top-wrapper h1 {
+  .top-main h2 {
     font-size: 32px;
   }
 
-  .heading h2 {
-    font-size: 20px;
+  .about-main h2 {
+    font-size: 32px;
+  }
+  .about-main p {
+    font-size: 15px;
+  }
+  .header-menus li{
+    font-size:7px
+  }
+  .header-menus a {
+    font-size: 7px;
   }
 }
 
 /* スマホ向けレイアウト */
 @media(max-width: 670px) {
 
-
-  /* header-rightクラスのdisplayをnoneに指定してください */
-  .header-right{
-    display:none;
-  }
-
-  /* menu-iconクラスのdisplayをblockに指定してください  */
-  .menu-icon{
-    display:block;
-  }
 }

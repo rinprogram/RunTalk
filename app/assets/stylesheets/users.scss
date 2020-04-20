@@ -116,3 +116,14 @@
 .users-form input {
   margin-bottom: 15px;
 }
+
+@media(max-width: 1000px) {
+  .user-tabs li a{
+    font-size: 13px;
+  }
+}
+
+/* スマホ向けレイアウト */
+@media(max-width: 670px) {
+
+}
