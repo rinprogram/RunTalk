@@ -282,7 +282,8 @@ header {
     font-size: 15px;
   }
   .header-menus li{
-    font-size:7px
+    font-size:7px;
+    line-height: 64px;
   }
   .header-menus a {
     font-size: 7px;
@@ -296,6 +297,9 @@ header {
     border-radius: 50%;
     object-fit: cover;
     margin-top: 10px;
+  }
+  .header{
+    height:70px;
   }
 }
 
