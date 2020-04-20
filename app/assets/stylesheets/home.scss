@@ -287,6 +287,16 @@ header {
   .header-menus a {
     font-size: 7px;
   }
+  .header-logo a{
+    font-size: 15px;
+  }
+  .name-left img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 10px;
+  }
 }
 
 /* スマホ向けレイアウト */
